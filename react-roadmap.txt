@@ -1,0 +1,29 @@
+React Hooks:
+
+-useReducer
+-useContext
+-useMemo
+-useCallback
+-CustomHooks
+
+
+Next.js
+
+Redux
+
+Formik (Form Management)
+
+React Query
+
+React Virtualised 
+
+React Spring 
+
+TypeScript:
+
+-Declearing Props
+-Stating Props
+-Handling Events
+
+
+React Native
