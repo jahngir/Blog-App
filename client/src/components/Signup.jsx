@@ -3,6 +3,7 @@ import "./form.css";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
+
 const Signup = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
@@ -28,8 +29,8 @@ const Signup = () => {
   };
 
   return (
-    <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
-      <div className="form-css bg-white rounded p-3">
+    <div className="d-flex justify-content-center align-items-center register-css">
+      <div className="form-css rounded p-3">
         <h3>Registration Form</h3>
         <div className="p-2 text-center">
         <Link to={"/login"} className="m-2 btn btn-light">

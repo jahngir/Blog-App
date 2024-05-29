@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { userContext } from "../App";
+import "./home.css";
 
 const Dashboard = () => {
   const user = useContext(userContext);
@@ -53,40 +54,54 @@ const Dashboard = () => {
   }, [user]);
 
   return (
-    <div>
-      <h1>Dashboard</h1>
-      <Link to={"/"} className="btn btn-primary">
-        Home
-      </Link>
-      <Link to={"/create"} className="btn btn-outline-info">
-        Create Post
-      </Link>
-      <button className="btn btn-danger" onClick={handleLogout}>
-        Logout
-      </button>
-      <div className="section">
-        <h2>Your Blogs</h2>
+    <>
+      <div className="container py-5">
+        <div className="section">
+          <h1>Dashboard</h1>
+          <Link to={"/"} className="btn btn-primary m-2">
+            Home
+          </Link>
+          <Link to={"/create"} className="btn btn-outline-info m-2">
+            Create Post
+          </Link>
+          <button className="btn btn-danger m-2" onClick={handleLogout}>
+            Logout
+          </button>
+        </div>
 
-        <div className="container">
-          <div className="row">
-            {posts.map((post) => (
-              <div className="col-4 col-lg-4">
-                <Link to={`/singlepost/${post._id}`}>
-                  <div className="card p-2">
-                    <img
-                      src={`http://localhost:3001/Images/${post.file}`}
-                      alt="Post Image Here"
-                    ></img>
-                    <h5>{post.title}</h5>
-                    <p>{post.description}</p>
-                  </div>
-                </Link>
-              </div>
-            ))}
+        <div className="section">
+          <h2>Your Blogs</h2>
+
+          <div className="container">
+            <div className="row">
+              {posts.map((post) => (
+                <div className="col-lg-4 col-sm-6 col-xm-12">
+                  <Link
+                    to={`/singlepost/${post._id}`}
+                    style={{ textDecoration: "none" }}
+                  >
+                    <div className="card mb-3">
+                      <div className="img-css">
+                        <img
+                          src={`http://localhost:3001/Images/${post.file}`}
+                          alt="Post Image Here"
+                        ></img>
+                      </div>
+
+                      <div className="card-content">
+                        <h4>{post.title}</h4>
+                        <p>{post.description}</p>
+                        <span>Author: {post.user}</span>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

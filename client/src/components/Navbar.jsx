@@ -60,7 +60,7 @@ const Navbar = () => {
         ) : (
           <div className="user">
             <h5>
-              <Link to="/register" className="btn btn-dark">
+              <Link to="/register" className="btn btn-light">
                 Login/Register
               </Link>
             </h5>
