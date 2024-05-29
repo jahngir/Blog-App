@@ -1,4 +1,4 @@
-.create-css{
+.general-css{
     padding: 70px 20px;
 
     .row{
@@ -17,4 +17,15 @@
         height: 150px;
     }
     
+}
+
+.single-css{
+    padding: 70px 20px;
+    .author-css{    
+        background: #4864E3;
+        padding: 5px 10px;
+        color: white;
+        font-size: 18px;
+        font-weight: 600;
+    }
 }

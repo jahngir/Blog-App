@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 import Swal from "sweetalert2";
+import "./blogs.css"
 
 const EditPost = () => {
   const navigate = useNavigate();
@@ -50,8 +51,8 @@ const EditPost = () => {
   };
 
   return (
-    <div className="d-flex vh-100 bg-primary justify-content-center align-items-center">
-      <div className="w-50 row bg-white rounded p-2">
+    <div className="d-flex justify-content-center align-items-center general-css">
+      <div className="row rounded p-2">
         <form className="d-flex" onSubmit={handleSubmit}>
           {/* <div className="col-lg-4 col-md-6 col-sm-12">
             <div className="m-2">
@@ -65,7 +66,7 @@ const EditPost = () => {
           </div> */}
           <div className="col-lg-8  col-md-6 col-sm-12">
             <div className="m-2">
-              <label>Post Title</label>
+              <label>New Post Title</label>
               <input
                 className="form-control"
                 type="text"
@@ -74,7 +75,7 @@ const EditPost = () => {
               />
             </div>
             <div className="m-2">
-              <label>Post Description</label>
+              <label>New Post Description</label>
               <textarea
                 className="form-control"
                 type="text"

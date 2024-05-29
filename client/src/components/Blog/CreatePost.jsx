@@ -53,7 +53,7 @@ const CreatePost = () => {
 
   return (
     <>
-      <div className="conatiner create-css">
+      <div className="conatiner general-css">
         <div className="d-flex justify-content-center align-items-center">
           <div className="row rounded p-2">
             <form className="d-flex" onSubmit={handleSubmit}>

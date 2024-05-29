@@ -29,10 +29,10 @@ const SinglePost = () => {
   };
 
   return (
-    <div className="section">
-      <div className="post-btns">
+    <div className="p-2">
+      <div className="post-btns container">
         {user.email === posts.email ? (
-          <div className="p-2 d-flex justify-content-end">
+          <div className="d-flex justify-content-end">
             <Link to={`/editpost/${posts._id}`} className="m-2 btn btn-info">
               Edit Post
             </Link>
@@ -48,17 +48,22 @@ const SinglePost = () => {
         )}
       </div>
 
-      <div className="container">
+      <div className="container single-css">
         <div className="row">
-          <div className="">
+          <div className="col-lg-4 col-md-4 col-sm-12 col-xm-12">
             <img
               src={`http://localhost:3001/Images/${posts.file}`}
               alt="Post Image Here"
             ></img>
+           
+            </div>
+            <div className="col-lg-8 col-md-8 col-sm-12 col-xm-12 py-3">
+            <span className="author-css">Author: {posts.user}</span>
             <h2>{posts.title}</h2>
             <p>{posts.description}</p>
-            <span>Author: {posts.user}</span>
-          </div>
+           
+
+            </div>
         </div>
       </div>
     </div>
