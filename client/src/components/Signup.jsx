@@ -13,7 +13,7 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/auth/register", { name, email, password })
+      .post("https://blog-app-rust-two-25.vercel.app/auth/register", { name, email, password })
       .then((result) => {
         if (result.data === "User Already Exist") {
           alert("User Already Exist");

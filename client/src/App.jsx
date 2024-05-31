@@ -28,7 +28,7 @@ function App() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/auth/")
+      .get("https://blog-app-rust-two-25.vercel.app/auth/")
       .then((user) => {
         setUser(user.data);
       })
