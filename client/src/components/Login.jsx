@@ -12,7 +12,10 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:3001/auth/login", { email, password })
+      .post("https://blog-app-rust-two-25.vercel.app/auth/login", {
+        email,
+        password,
+      })
       .then((result) => {
         if (result.data === "Record Not Existed") {
           alert("Record Not Existed");
