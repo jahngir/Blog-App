@@ -23,7 +23,7 @@ const app = express();
 // restrictions for API which page to asscess and which not in cors
 app.use(
   cors({
-    origin: ["https://blogappclient-jahangir-naseers-projects.vercel.app"],
+    origin: ["https://blogappclient-6rfjlhjsl-jahangir-naseers-projects.vercel.app/"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
   })
